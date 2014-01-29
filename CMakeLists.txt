@@ -4,7 +4,8 @@ project(ball_tracker)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS nao_driver nao_msg opencv std_msg)
+find_package(catkin REQUIRED COMPONENTS nao_driver nao_msgs std_msgs)
+find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -36,7 +37,7 @@ find_package(catkin REQUIRED COMPONENTS nao_driver nao_msg opencv std_msg)
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
+#   std_msgss  # Or other packages containing msgs
 # )
 
 ###################################
@@ -51,7 +52,7 @@ find_package(catkin REQUIRED COMPONENTS nao_driver nao_msg opencv std_msg)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ball_tracker
-#  CATKIN_DEPENDS nao_driver nao_msg opencv std_msg
+#  CATKIN_DEPENDS nao_driver nao_msgs opencv2 std_msgs
 #  DEPENDS system_lib
 )
 
